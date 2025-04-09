@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global CSS styles */
+
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --background-light: #ffffff;
+  --text-light: #facc15;
+  --text-dark: #f1f5f9;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background-light);
+    --text-color: var(--text-light);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #f8ece5;
+  color: var(--text-color);
+}
+
+/* Dark theme classes */
+
+
+.light {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+header,
+footer {
+  background-color: #D29F80;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.main-page {
+  right: 0 !important;
+  position: absolute;
+  margin-top: 25px;
+}
+
+/* Custom scrollbar styling */
+/* For Firefox */
+.sidebarcss {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+}
+
+/* For WebKit browsers */
+.sidebarcss::-webkit-scrollbar {
+  width: 2px; 
+  height: 2px; 
+}
+
+.sidebarcss::-webkit-scrollbar-track {
+  background: #252323;
+  border-radius: 1px;
+}
+
+.sidebarcss::-webkit-scrollbar-thumb {
+  background: #252424 !important; 
+  border-radius: 1px; 
+}
+
+.sidebarcss::-webkit-scrollbar-thumb:hover {
+  background: #2a2828 !important; 
+}
+
+/* Global scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(79, 70, 229, 0.5);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(79, 70, 229, 0.7);
+}
+
+/* Custom transitions */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
